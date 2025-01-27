@@ -28,7 +28,7 @@ class BotTest {
     @Test
     void testToString() {
         Bot bot = new Bot();
-        assert bot.toString().equals("Bot{direction=N, lat=1, lon=1}");
+        assert bot.toString().equals("Bot{Direction='N', lng=1, lat=1}");
     }
 
     @Test

@@ -5,6 +5,7 @@ import com.daniel.basicbot.model.Board;
 import com.daniel.basicbot.model.Bot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,14 +20,16 @@ public class BotController {
         return util.hello(name);
     }
 
+    @Profile("dev")
     @PostMapping("/all")
     public String all(@RequestParam Board board, @RequestParam Bot bot, @RequestParam String command) {
         this.board = board;
         String boardString = board.toString();
         this.bot = bot;
         String botString = bot.toString();
-        command(command);
-        return "All commands executed" + boardString + botString + command;
+        String result = util.executeCommand(bot, board, command);
+        return "All commands executed \n" +
+                boardString + "\n" + botString + "\n" + command + "\n" + result;
     }
 
     @PostMapping("/setBoard")

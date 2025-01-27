@@ -2,7 +2,7 @@ package com.daniel.basicbot.model;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BoardTest {
 
@@ -25,7 +25,7 @@ class BoardTest {
         Board board = new Board();
         board.setLat(5);
         board.setLng(5);
-        assert board.validatePos(3,3);
+        assert board.validatePos(3, 3);
     }
 
     @Test
@@ -33,7 +33,7 @@ class BoardTest {
         Board board = new Board();
         board.setLat(5);
         board.setLng(5);
-        assert !board.validatePos(6,6);
+        assert !board.validatePos(6, 6);
     }
 
     @Test

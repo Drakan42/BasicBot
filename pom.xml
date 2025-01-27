@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.daniel</groupId>
-    <artifactId>DevoTeam</artifactId>
+    <artifactId>BasicBot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>BasicBot</name>
     <description>A Robot controller program to move and in a 2d gridded plain</description>
